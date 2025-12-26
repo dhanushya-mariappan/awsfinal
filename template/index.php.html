@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Meta Title -->
+    <title>Amazon Advertising Solutions | Enterprise DSP, AMC & Prime Video Ads</title>
+    
+    <!-- Meta Description -->
+    <meta name="description" content="Unlock enterprise-level growth with O3M Directional Marketing. Expert management of Amazon DSP, Marketing Cloud (AMC), and Prime Video Advertising using first-party purchase data.">
+    
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "O3M Directional Marketing",
+      "image": "logo1.png",
+      "@id": "https://o3m.com",
+      "url": "https://o3m.com",
+      "telephone": "+91 44 4212 6116",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "A4, Palani Towers No. 31, Venkatanarayana Road, T. Nagar",
+        "addressLocality": "Chennai",
+        "addressRegion": "TN",
+        "postalCode": "600017",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 13.0405,
+        "longitude": 80.2337
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/IndianMarketingFirm",
+        "https://www.instagram.com/o3m_directional_marketing/",
+        "https://www.linkedin.com/company/1157128/",
+        "https://www.youtube.com/channel/UC85RV8fvtPyhcKur6xaAC5w"
+      ],
+      "service": [
+        {
+          "@type": "Service",
+          "name": "Amazon DSP Management",
+          "description": "Programmatic display, video, and audio advertising using Amazon's first-party data."
+        },
+        {
+          "@type": "Service",
+          "name": "Amazon Marketing Cloud (AMC) Analytics",
+          "description": "Privacy-safe clean room analytics for cross-channel attribution."
+        },
+        {
+          "@type": "Service",
+          "name": "Prime Video Advertising",
+          "description": "Streaming TV ads on Prime Video, Freevee, and Fire TV."
+        }
+      ]
+    }
+    </script>
+
+    <!-- Importing Montserrat from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ==================== RESET & BASE ==================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --accent-color: #ff863f;   
+            --bg-accent: #fff1f3;      
+            --dark-grey: #232F3E;      
+            --medium-grey: #37475A;
+            --light-grey: #F3F3F3;
+            --white: #FFFFFF;
+            --text-primary: #0F1111;
+            --text-secondary: #565959;
+            --success-green: #2e7d32;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background-color: var(--white);
+        }
+
+        /* ==================== HEADER ==================== */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.25rem 2rem; 
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Updated Logo Holder Structure */
+        .logo-holder {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            height: 45px;
+            width: auto;
+            min-width: 150px;
+            border-radius: 4px;
+            justify-content: center;
+        }
+
+        .logo-holder img {
+            height: 35px; 
+            width: auto;
+            max-width: 180px;
+            display: block;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem; 
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 600; 
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent-color);
+        }
+
+        .cta-header {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 0.75rem 1.75rem; 
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-family: 'Montserrat', sans-serif;
+            margin-left: 1rem; 
+        }
+
+        .cta-header:hover {
+            filter: brightness(0.9);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--dark-grey);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* ==================== HERO SECTION ==================== */
+        .hero {
+            position: relative;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+            background-color: #232F3E;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .hero-bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.5); 
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+            z-index: 2;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+            font-weight: 700;
+            color: var(--white);
+            text-shadow: 0 4px 15px rgba(0,0,0,0.6);
+        }
+
+        .highlight-text {
+            color: var(--white);
+            font-weight: 600;
+            font-size: 1.6rem;
+            display: block;
+            margin-bottom: 2.5rem;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+            opacity: 1 !important;
+        }
+
+        .hero-ctas {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+
+        .btn-primary {
+            background: var(--accent-color);
+            color: var(--white);
+            padding: 1rem 2.2rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(255, 134, 63, 0.4);
+        }
+
+        .hero-note {
+            font-size: 0.9rem;
+            opacity: 1;
+            font-weight: 500;
+            font-style: italic;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        /* ==================== CONTAINER & SECTIONS ==================== */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--dark-grey);
+            font-weight: 700;
+        }
+
+        /* ==================== VALUE CARDS ==================== */
+        .value-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .value-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 4px solid var(--accent-color);
+        }
+
+        .value-card h3 {
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        /* ==================== COMPARISON TABLE ==================== */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 600px;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 1.2rem;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        .comparison-table th {
+            background: var(--accent-color);
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background: #fafafa;
+        }
+
+        /* ==================== FAQ STYLING ==================== */
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-question {
+            padding: 1.5rem 0;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--dark-grey);
+            transition: color 0.3s ease;
+        }
+
+        .faq-question:hover {
+            color: var(--accent-color);
+        }
+
+        .faq-question span {
+            font-size: 1.5rem;
+            line-height: 1;
+            color: var(--accent-color);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            padding-bottom: 0;
+        }
+
+        .faq-answer.active {
+            max-height: 300px;
+            padding-bottom: 1.5rem;
+        }
+
+        /* ==================== FORMS ==================== */
+        .lead-form {
+            background: var(--bg-accent);
+            padding: 2.5rem;
+            border-radius: 8px;
+            max-width: 700px;
+            margin: 2rem auto;
+            border: 1px solid rgba(0,0,0,0.05);
+            min-height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .form-group {
+            margin-bottom: 1.2rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.4rem;
+            font-weight: 600;
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-family: inherit;
+        }
+
+        .btn-submit {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem;
+            border: none;
+            width: 100%;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: filter 0.2s;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ==================== THANK YOU PAGE STYLING ==================== */
+        #thankYouPage {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--success-green);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .thank-you-title {
+            font-size: 2rem;
+            color: var(--dark-grey);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .thank-you-message {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .btn-back {
+            display: inline-block;
+            background: var(--dark-grey);
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .btn-back:hover {
+            background: #000;
+        }
+
+        /* ==================== FOOTER ==================== */
+        footer {
+            background: var(--bg-accent);
+            color: var(--text-primary);
+            padding: 4rem 2rem 2rem;
+            border-top: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto 3rem;
+            text-align: left;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.2rem;
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .footer-col p {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 1.2rem;
+            margin-top: 1.2rem;
+        }
+
+        .social-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            transition: all 0.3s ease;
+            color: var(--dark-grey);
+        }
+
+        .social-link:hover {
+            color: var(--accent-color);
+            transform: translateY(-2px);
+        }
+
+        .social-link svg {
+            width: 24px;
+            height: 24px;
+            fill: currentColor;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(0,0,0,0.1);
+            padding-top: 2rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+            text-align: center;
+        }
+
+        /* ==================== RESPONSIVE ==================== */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: white;
+                flex-direction: column;
+                padding: 1rem;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            .nav-menu.active { display: flex; }
+            .menu-toggle { display: flex; }
+            .hero h1 { font-size: 2.2rem; }
+            .highlight-text { font-size: 1.1rem; }
+            .cta-header { display: none; }
+            .footer-grid { text-align: center; }
+            .social-icons { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#home" class="logo-holder">
+                <img src="logo1.png" alt="Brand Logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span style="display:none; font-weight:700; font-size:1.1rem; color:var(--dark-grey);">BRAND LOGO</span>
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#amazon-dsp" onclick="event.preventDefault(); scrollToSection('amazon-dsp')">DSP</a></li>
+                <li><a href="#amc" onclick="event.preventDefault(); scrollToSection('amc')">AMC</a></li>
+                <li><a href="#prime-video" onclick="event.preventDefault(); scrollToSection('prime-video')">Prime Video</a></li>
+                <li><a href="#contact" onclick="event.preventDefault(); scrollToSection('contact')">Contact</a></li>
+            </ul>
+            <button class="cta-header" onclick="scrollToSection('contact')">Talk to Us</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <img src="bg.jpeg" alt="Data Visualization background">
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Reach High-Intent Audiences with Amazon Data</h1>
+            <span class="highlight-text">Enterprise Amazon DSP, Marketing Cloud (AMC) & Prime Video Advertising</span>
+            
+            <div class="hero-ctas">
+                <button class="btn-primary" onclick="scrollToSection('amazon-dsp')">Explore DSP</button>
+                <button class="btn-primary" onclick="scrollToSection('amc')">Discover AMC</button>
+                <button class="btn-primary" onclick="scrollToSection('prime-video')">Prime Video Ads</button>
+            </div>
+            <p class="hero-note">Advanced Partner with 20+ years of digital advertising expertise</p>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="amazon-dsp">
+            <h2>Amazon DSP (Demand-Side Platform)</h2>
+            <p>Amazon DSP allows you to programmatically buy display, video, and audio ads both on and off Amazon. Reach shoppers across the web using exclusive first-party purchase data.</p>
+            <div class="table-wrapper">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Amazon DSP</th>
+                            <th>Google/Meta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>Targeting Basis</td><td>Real Purchase Behavior</td><td>Interests & Search</td></tr>
+                        <tr><td>Data Quality</td><td>Deterministic First-Party</td><td>Probabilistic/Third-Party</td></tr>
+                        <tr><td>Environment</td><td>Brand Safe (Twitch, IMDb, etc.)</td><td>Open Web</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="amc">
+            <hr style="margin-bottom: 4rem; opacity: 0.1;">
+            <h2>Amazon Marketing Cloud (AMC)</h2>
+            <p>AMC is a secure, privacy-safe clean room where advertisers can perform analytics across pseudonymized signals, including Amazon Ads signals as well as their own inputs.</p>
+            <div class="value-points">
+                <div class="value-card">
+                    <h3>Cross-Channel Attribution</h3>
+                    <p>Understand the impact of your ads across Search, Display, and Video in one view.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Custom Audience Creation</h3>
+                    <p>Build advanced audience segments based on complex purchase paths and frequency.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="prime-video">
+            <hr style="margin-bottom: 4rem; opacity: 0.1;">
+            <h2>Prime Video & Streaming TV Ads</h2>
+            <p>Place your brand alongside premium content. Reach millions of viewers on Prime Video, Freevee, and Fire TV with non-skippable, high-impact video formats.</p>
+            <div class="value-points">
+                <div class="value-card">
+                    <h3>Premium Content</h3>
+                    <p>Your ads appear during hit movies, award-winning series, and live sports.</p>
+                </div>
+                <div class="value-card">
+                    <h3>Full Funnel Impact</h3>
+                    <p>Drive awareness with the scale of TV combined with the precision of digital targeting.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-question">What is Amazon DSP (Demand-Side Platform)? <span>+</span></div>
+                <div class="faq-answer">Amazon DSP is a demand-side platform that allows you to programmatically buy display, video, and audio ads both on and off Amazon. It uses Amazon's exclusive first-party data to reach audiences based on their actual purchase behavior.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do I need to sell products on Amazon to use the DSP? <span>+</span></div>
+                <div class="faq-answer">No. Amazon DSP is available to both endemic (those who sell on Amazon) and non-endemic advertisers (those who don't). Brands in sectors like Real Estate, BFSI, and Automobile can leverage Amazon's audience data to drive traffic to their own websites.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How does Amazon Marketing Cloud (AMC) differ from standard reporting? <span>+</span></div>
+                <div class="faq-answer">Standard reporting provides aggregate metrics on campaign performance. AMC is a privacy-safe, cloud-based clean room that allows for custom, cross-channel analysis, helping you understand the full customer journey and the hidden value of your ad spend.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What is the minimum budget for an Amazon DSP campaign? <span>+</span></div>
+                <div class="faq-answer">While Amazon's managed service typically requires higher minimums, working with a partner like us allows for more flexible entry points. However, to see statistically significant results from the platform's machine learning, we recommend a consistent monthly spend.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Can I target specific audiences on Prime Video? <span>+</span></div>
+                <div class="faq-answer">Yes. Prime Video and Streaming TV ads allow you to target audiences using Amazon’s first-party signals, such as lifestyle interests, in-market segments, and demographic data, ensuring your premium video content reaches the right viewers.</div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="lead-form">
+                <!-- Main Form Content -->
+                <div id="formContent">
+                    <h2 style="text-align: center; color: var(--dark-grey);">Get a Custom Strategy</h2>
+                    <p style="text-align: center; margin-bottom: 2rem; color: var(--text-secondary);">Our experts will analyze your goals and build a data-backed roadmap.</p>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label>Full Name *</label>
+                            <input type="text" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Company Email *</label>
+                            <input type="email" required placeholder="john@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Industry</label>
+                            <select>
+                                <option>Real Estate</option>
+                                <option>D2C / E-commerce</option>
+                                <option>BFSI / Finance</option>
+                                <option>Automobile</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Monthly Ad Spend (Est.)</label>
+                            <select>
+                                <option>$5k - $15k</option>
+                                <option>$15k - $50k</option>
+                                <option>$50k+</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea rows="4" placeholder="How can we help?"></textarea>
+                        </div>
+                        <input class="btn-submit" type="submit" value="Request Consultation">
+                    </form>
+                </div>
+
+                <!-- Thank You Page Content (Hidden by default) -->
+                <div id="thankYouPage" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h2 class="thank-you-title">Thank You!</h2>
+                    <p class="thank-you-message">Your request for a consultation has been received. One of our Amazon Advertising specialists will reach out to you within 24 hours to discuss your custom strategy.</p>
+                    <a href="#home" class="btn-back" onclick="resetForm(event)">Return Home</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Solutions</h4>
+                <p>Amazon DSP</p>
+                <p>Amazon Marketing Cloud</p>
+                <p>Prime Video Ads</p>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p>Sales: sales@o3m.com</p>
+                <p>Support: support@o3m.com</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/IndianMarketingFirm" class="social-link" target="_blank" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path></svg>
+                    </a>
+                    <a href="https://www.instagram.com/o3m_directional_marketing/" class="social-link" target="_blank" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5a4.25 4.25 0 0 0 4.25 4.25h8.5a4.25 4.25 0 0 0 4.25-4.25v-8.5a4.25 4.25 0 0 0-4.25-4.25h-8.5zm8.75 3a.75.75 0 1 1 0 1.5.75.75 0 0 1 0-1.5zM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10zm0 1.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/company/1157128/" class="social-link" target="_blank" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path><circle cx="4" cy="4" r="2"></circle></svg>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UC85RV8fvtPyhcKur6xaAC5w" class="social-link" target="_blank" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 4-8 4z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/o3mdm" class="social-link" target="_blank" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path></svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Corporate Office</h4>
+                <p>A4, Palani Towers No. 31, Venkatanarayana Road, T. Nagar, Chennai-600017 Tamil Nadu, India.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Branch Office</h4>
+                <p>54, Bharathi Park 7th Corss Rd, Saibaba Colony, Coimbatore, Tamil Nadu 641043.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 O3M Directional Marketing. Amazon Advertising Solutions Partner. All rights reserved.</p>
+        </div>
+    </footer>
+
+   <script>
+        const menuBtn = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+            });
+        });
+
+        function scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                const offset = 80; 
+                const bodyRect = document.body.getBoundingClientRect().top;
+                const elementRect = el.getBoundingClientRect().top;
+                const elementPosition = elementRect - bodyRect;
+                const offsetPosition = elementPosition - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        }
+
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const isOpen = answer.classList.contains('active');
+                
+                document.querySelectorAll('.faq-answer').forEach(el => el.classList.remove('active'));
+                document.querySelectorAll('.faq-question span').forEach(el => el.textContent = '+');
+                
+                if (!isOpen) {
+                    answer.classList.add('active');
+                    button.querySelector('span').textContent = '-';
+                }
+            });
+        });
+
+        // Handle Form Submission with Thank You Page
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Hide form and show thank you page
+            document.getElementById('formContent').style.display = 'none';
+            document.getElementById('thankYouPage').style.display = 'block';
+            
+            // Scroll to the center of the thank you message
+            const contactSection = document.getElementById('contact');
+            const offset = 100;
+            const bodyRect = document.body.getBoundingClientRect().top;
+            const elementRect = contactSection.getBoundingClientRect().top;
+            const elementPosition = elementRect - bodyRect;
+            window.scrollTo({
+                top: elementPosition - offset,
+                behavior: 'smooth'
+            });
+        });
+
+        // Function to reset form view
+        function resetForm(e) {
+            e.preventDefault();
+            document.getElementById('thankYouPage').style.display = 'none';
+            document.getElementById('formContent').style.display = 'block';
+            document.getElementById('contactForm').reset();
+            scrollToSection('home');
+        }
+    </script>
+</body>
+</html>
